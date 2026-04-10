@@ -31,10 +31,10 @@ def simpson_composite(f, a: float, b: float, n: int) -> float:
     integ = 0
     h = (b-a)/n
     x_series = np.arange(a ,b+h ,h)
-    k = np.arange(0 ,n/2 ,dtype=int) +1
+    k = np.arange(0 ,n/2 ,dtype=int) 
     w = h*np.ones(n+1 ,dtype=int)
-    w[2*k] = 4*h/3
-    w[2*k-1] = 2*h/3
+    w[2*k] = 2*h/3
+    w[2*k+1] = 4*h/3
     w[0] = h/3
     w[-1] = h/3
     for i in range(n+1):
