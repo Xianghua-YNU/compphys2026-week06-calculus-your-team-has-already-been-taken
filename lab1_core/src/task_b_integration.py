@@ -1,5 +1,6 @@
 import math
 import numpy as np
+import matplotlib.pyplot as plt
 
 def debye_integrand(x: float) -> float:
     if abs(x) < 1e-12:
@@ -53,4 +54,35 @@ def debye_integral(T: float, theta_d: float = 428.0, method: str = "simpson", n:
         return trapezoid_composite(debye_integrand,0 , y, n)
     raise NotImplementedError("TODO B3")
 
+# # 误差计算与检查
+# E_h_simp = debye_integral(80 ,428.0 ,'simpson' ,200)
+# E_h_2_simp = debye_integral(80 ,428.0 ,'simpson' ,100)
+# E_simp = (E_h_simp - E_h_2_simp)/(2**4-1)
+# print(f'辛普森方法的误差在n=200的时候为{E_simp}')
 
+# E_h_tr = debye_integral(80 ,428.0 ,'tr'  ,200)
+# E_h_2_tr = debye_integral(80 ,428.0 , 'tr' ,100)
+# E_tr = (E_h_tr - E_h_2_tr)/(2**2-1)
+# print(f'tr方法的误差在n=200的时候为{E_tr}')
+
+
+# plot the result
+temp = np.arange(10 , 600,5)
+thermal_capacity = []
+theta_d = 438.0
+for temp_i in temp:
+    C = thermal_capacity.append((temp_i/theta_d)**3 *debye_integral(temp_i,theta_d ,'simpson' ,200))
+thermal_capacity = np.array(thermal_capacity)
+
+
+# plt.plot(temp ,thermal_capacity ,'r--' ,label = 'result of integral')
+# plt.title('result of integral')
+# plt.legend()
+# plt.xlabel('T')
+# plt.ylabel('I')
+
+plt.plot(temp ,thermal_capacity ,'r--' ,label = 'thermal_capacity')
+plt.title('result of integral')
+plt.legend()
+plt.xlabel('T')
+plt.ylabel('thermal_capacity')
