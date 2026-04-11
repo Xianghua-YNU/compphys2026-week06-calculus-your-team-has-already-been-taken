@@ -27,7 +27,7 @@ def nu_table(T_values, h: float = 1e-8):
     # TODO A3: 返回 [(T, nu(T)), ...]
     return [(T, sensitivity_nu(T, h)) for T in T_values]
 
-Test_T=[1.0e8,1.5e8,2.0e8,2.5e8,3.0e8]
+Test_T=[1.0e8,1.5e8,2.0e8,2.5e8,3.0e8,5.0e8,1.0e9]
 Table=nu_table(Test_T)
 for T, nu in Table:
         print(f"{T:.4e}    | {nu:.2f}")
