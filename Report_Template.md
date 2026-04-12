@@ -7,10 +7,14 @@
 
 | 任务     | 负责同学 | Commit Hash                                                                                                                      | 贡献说明      |
 | ------ | ---- | -------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| Task A |      |                                                                                                                                  |           |
+| Task A |   董灏   |   9edc1585ef71a3f2402a831ded1c6b8bf070175d
+b1a1c70c9d9a1fcff3adc4848f290ae37e4f16c7
+5b4788de5db2a6ca973b1ea89f25e5cb2559e6cd
+c2e06c98ef791b21dad46f01619c8356ab45cafd
+|   taskA及报告        |
 | Task B | 夏筠霖  | 28dff2816d04059d4d67c013768979cd2c61f59a<br>e3247cf17f8b051e7e4cbbefd4444be26ff55d89<br>dcc2e8ab3165af2461ed8b4c49ba21727319ed77 | taskB及其报告 |
 | Task C |      |                                                                                                                                  |           |
-| Bonus  |      |                                                                                                                                  |           |
+| Bonus  |  董灏    |                                                                                                                                  |    bonus及报告       |
 
 ---
 
